@@ -20,7 +20,7 @@
   --ocean-ambient: rgba(10, 92, 64, 0.18);
   
   /* Neutral Palette */
-  --bg-page: #F6FAF8;
+  --bg-page: #F9FBFA;
   --bg-surface: #FFFFFF;
   --text-main: #112820;
   --text-muted: #4B6B60;
@@ -904,4 +904,9 @@ input, textarea, select {
 /* Impact Metrics Luxury Emerald Gradient Bar */
 .impact-metrics-bar {
   background: linear-gradient(90deg, #03251A 0%, #063C2A 35%, #0A5C40 50%, #063C2A 65%, #03251A 100%) !important;
+}
+
+/* Global Page Background Override */
+body, html {
+  background-color: #F9FBFA !important;
 }

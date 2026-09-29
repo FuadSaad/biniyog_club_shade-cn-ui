@@ -69,7 +69,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="pb-20 lg:pb-0 bg-[#F6FAF8] text-[#112820] antialiased selection:bg-emerald-200 selection:text-emerald-900">
+      <body className="pb-20 lg:pb-0 bg-[#F9FBFA] text-[#112820] antialiased selection:bg-emerald-200 selection:text-emerald-900">
         {children}
       </body>
     </html>

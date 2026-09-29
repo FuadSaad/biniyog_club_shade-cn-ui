@@ -31,8 +31,8 @@
   /* 3D Shadows & Glass */
   --shadow-3d-sm: 0 4px 14px rgba(10, 92, 64, 0.08), 0 2px 4px rgba(0, 0, 0, 0.03);
   --shadow-3d-md: 0 12px 28px rgba(10, 92, 64, 0.12), 0 4px 10px rgba(0, 0, 0, 0.04);
-  --shadow-3d-lg: 0 24px 50px rgba(6, 60, 42, 0.18), 0 8px 18px rgba(0, 0, 0, 0.06);
-  --shadow-hero-stage: 0 35px 80px -15px rgba(6, 60, 42, 0.28), 0 15px 35px -10px rgba(0, 168, 107, 0.2);
+  --shadow-3d-lg: 0 12px 24px -4px rgba(15, 23, 42, 0.06), 0 4px 8px -2px rgba(15, 23, 42, 0.03);
+  --shadow-hero-stage: 0 20px 45px -10px rgba(15, 23, 42, 0.08), 0 4px 12px rgba(15, 23, 42, 0.04);
   
   --glass-bg: rgba(255, 255, 255, 0.88);
   --glass-border: rgba(255, 255, 255, 0.7);
@@ -110,13 +110,7 @@ input, textarea, select {
 }
 
 /* Ambient glow orbs in background */
-.bg-ambient-blob {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(100px);
-  z-index: -1;
-  pointer-events: none;
-}
+.bg-ambient-blob { display: none !important; }
 
 .blob-1 {
   top: 20px;
@@ -153,61 +147,65 @@ input, textarea, select {
 
 /* 3D Button Styles */
 .btn-3d-ocean {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  background: linear-gradient(135deg, #0A5C40 0%, #008754 50%, #00A86B 100%);
-  color: #FFFFFF;
-  font-weight: 700;
-  border-radius: 9999px;
-  padding: 0.75rem 1.6rem;
-  min-height: 44px;
-  box-shadow: 0 4px 15px rgba(10, 92, 64, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.35);
-  transition: all var(--transition-smooth);
-  cursor: pointer;
-  border: none;
-  text-decoration: none;
-  user-select: none;
-}
-
-.btn-3d-ocean:hover {
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 8px 24px rgba(0, 168, 107, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.45);
-}
-
-.btn-3d-ocean:active {
-  transform: translateY(1px) scale(0.98);
-}
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: #0A6C4D !important;
+    color: #FFFFFF !important;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 12px !important;
+    padding: 0.75rem 1.75rem !important;
+    min-height: 46px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04) !important;
+    transition: all 0.15s ease-in-out !important;
+    cursor: pointer;
+    border: 1px solid #08543C !important;
+    text-decoration: none;
+    user-select: none;
+  }
+  .btn-3d-ocean:hover {
+    background: #08543C !important;
+    box-shadow: 0 4px 12px rgba(10, 108, 77, 0.22) !important;
+    transform: translateY(-1px) !important;
+  }
+  .btn-3d-ocean:active {
+    transform: translateY(0) !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06) !important;
+  }
 
 .btn-3d-outline {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(8px);
-  color: var(--ocean-primary);
-  font-weight: 700;
-  border-radius: 9999px;
-  padding: 0.75rem 1.6rem;
-  min-height: 44px;
-  border: 1.5px solid var(--ocean-primary);
-  box-shadow: 0 2px 8px rgba(10, 92, 64, 0.08);
-  transition: all var(--transition-smooth);
-  cursor: pointer;
-  text-decoration: none;
-  user-select: none;
-}
-
-.btn-3d-outline:hover {
-  background: var(--ocean-light);
-  color: var(--ocean-primary-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(10, 92, 64, 0.15);
-}
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: #FFFFFF !important;
+    color: #0F172A !important;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 12px !important;
+    padding: 0.75rem 1.75rem !important;
+    min-height: 46px;
+    border: 1px solid #CBD5E1 !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04) !important;
+    transition: all 0.15s ease-in-out !important;
+    cursor: pointer;
+    text-decoration: none;
+    user-select: none;
+  }
+  .btn-3d-outline:hover {
+    background: #F8FAFC !important;
+    border-color: #94A3B8 !important;
+    color: #0A6C4D !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06) !important;
+  }
+  .btn-3d-outline:active {
+    transform: translateY(0) !important;
+  }
 
 /* ========================================================
    HERO 3D SHOWCASE STAGE & BANNER SLIDER (RESPONSIVE)

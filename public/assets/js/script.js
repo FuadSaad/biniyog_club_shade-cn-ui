@@ -1,3 +1,13 @@
+// Safe ready helper for both HTML and React/Next.js
+function onReady(fn) {
+  if (typeof document !== 'undefined') {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', fn);
+    } else {
+      setTimeout(fn, 20);
+    }
+  }
+}
 /* ========================================================
    Biniog Club - Interactive Engine & 3D Hero Showcase (V3.5)
    Fully Responsive & Bilingual Translation Engine
@@ -14,7 +24,21 @@ function getCurrentLanguage() {
   return 'en'; // Initial language is English by default
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+function biniyogInit() {
+  initLanguageSwitcher();
+  initHeroSlider();
+  initProjectFilters();
+  initModals();
+  initMobileMenu();
+  initContactForm();
+  initBannerLightbox();
+  initStatsCounter();
+  initCardCounters();
+}
+window.biniyogInit = biniyogInit;
+onReady(() => {
+  biniyogInit();
+
   initLanguageSwitcher();
   initHeroSlider();
   // initTilt3D(); // 3D Tilt disabled as requested
@@ -805,7 +829,7 @@ function initCardCounters() {
 
 
 // Bottom Nav Logic
-document.addEventListener('DOMContentLoaded', () => {
+onReady(() => {
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
   
   document.querySelectorAll('.bottom-nav-link').forEach(link => {
@@ -1007,7 +1031,7 @@ async function loadUserProfile() {
 }
 
 // Ensure loadUserProfile runs on all pages
-document.addEventListener('DOMContentLoaded', loadUserProfile);
+onReady(loadUserProfile);
 
 window.showToast = function(type, message) {
     let container = document.getElementById('toast-container');
@@ -1036,7 +1060,7 @@ window.showToast = function(type, message) {
 // DASHBOARD FUNCTIONALITY (Real API)
 // ============================================================
 
-document.addEventListener('DOMContentLoaded', () => {
+onReady(() => {
     const token = localStorage.getItem('token');
     const path = window.location.pathname;
 

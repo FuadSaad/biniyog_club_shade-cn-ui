@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
-import { Inter, Noto_Sans_Bengali } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
-const notoBengali = Noto_Sans_Bengali({ subsets: ["bengali"], weight: ["400", "500", "600", "700", "800", "900"], variable: "--font-bangla" });
-
 export const metadata: Metadata = {
-  title: "Biniyog Club | Interest-Free Business Ecosystem",
-  description: "Invest in real, vetted businesses. Build a brighter, prosperous Bangladesh together with Halal and Shariah-compliant opportunities.",
+  title: "Biniyog Club | Towards a Prosperous Bangladesh with Halal Investment",
+  description: "An interest-free business ecosystem connecting people, businesses & opportunities for a brighter Bangladesh.",
+  icons: {
+    icon: "/assets/images/Biniyog Club Logo Icon PNG.png",
+    shortcut: "/assets/images/Biniyog Club Logo Icon PNG.png",
+    apple: "/assets/images/Biniyog Club Logo Icon PNG.png",
+  },
 };
 
 export default function RootLayout({
@@ -16,11 +17,59 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${notoBengali.variable}`}>
+    <html lang="en">
       <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+        {/* Preconnect to Fonts */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet"
+        />
+
+        {/* FontAwesome 6 */}
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+
+        {/* Custom Stylesheet */}
+        <link rel="stylesheet" href="/assets/css/style.css" />
+
+        {/* Tailwind CSS CDN & Theme Config to perfectly match HTML design */}
+        <script src="https://cdn.tailwindcss.com" async={false}></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              tailwind.config = {
+                theme: {
+                  extend: {
+                    colors: {
+                      ocean: {
+                        50: '#F0FDF8',
+                        100: '#E6F7F2',
+                        200: '#C2EEDF',
+                        300: '#8FE0C5',
+                        400: '#4EC8A3',
+                        500: '#00A86B',
+                        600: '#0A8757',
+                        700: '#0A5C40',
+                        800: '#063C2A',
+                        900: '#03251A',
+                      }
+                    },
+                    fontFamily: {
+                      sans: ['"Plus Jakarta Sans"', '"Hind Siliguri"', 'sans-serif'],
+                      bangla: ['"Hind Siliguri"', 'sans-serif'],
+                    }
+                  }
+                }
+              }
+            `,
+          }}
+        />
       </head>
-      <body className="font-sans antialiased bg-[#F6FAF8] text-[#112820]">
+      <body className="pb-20 lg:pb-0 bg-[#F6FAF8] text-[#112820] antialiased selection:bg-emerald-200 selection:text-emerald-900">
         {children}
       </body>
     </html>

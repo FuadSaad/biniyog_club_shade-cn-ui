@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="color-scheme" content="light">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title data-i18n="page_title_about">About Us | Biniyog Club</title>
+  <meta name="description" content="A people-powered, interest-free business ecosystem for a brighter Bangladesh.">
+
+  <!-- Favicon / Brand Logo Icon -->
+  <link rel="icon" type="image/png" href="/assets/images/Biniyog Club Logo Icon PNG.png">
+  <link rel="shortcut icon" type="image/png" href="/assets/images/Biniyog Club Logo Icon PNG.png">
+  <link rel="apple-touch-icon" href="/assets/images/Biniyog Club Logo Icon PNG.png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ocean: {
+              50: '#F0FDF8',
+              100: '#E6F7F2',
+              200: '#C2EEDF',
+              300: '#8FE0C5',
+              400: '#4EC8A3',
+              500: '#00A86B',
+              600: '#0A8757',
+              700: '#0A5C40',
+              800: '#063C2A',
+              900: '#03251A',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '"Hind Siliguri"', 'sans-serif'],
+            bangla: ['"Hind Siliguri"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body class="pb-20 lg:pb-0 bg-[#F6FAF8] text-[#112820] antialiased selection:bg-emerald-200 selection:text-emerald-900" >
+
+  <!-- Ambient Light Orbs -->
+  <div class="bg-ambient-blob blob-1"></div>
+  <div class="bg-ambient-blob blob-2"></div>
+
+  <!-- Mobile Drawer Backdrop Overlay -->
+  <div id="mobileMenuBackdrop" class="fixed inset-0 bg-black/60 z-40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300"></div>
+
+  <!-- Top Announcement Bar -->
+  <header class="bg-[#03251A] text-emerald-200 text-sm sm:text-sm py-2 px-3 sm:px-4 border-b border-emerald-900/50">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1.5 sm:gap-2">
+      <div class="flex items-center gap-2 overflow-hidden text-center sm:text-left w-full sm:w-auto justify-center sm:justify-start min-w-0">
+        <span class="inline-flex items-center gap-1 bg-emerald-700/60 text-white font-semibold px-2 py-0.5 rounded-full text-[9px] sm:text-xs tracking-wide uppercase shrink-0">
+          <i class="fa-solid fa-leaf text-emerald-400"></i> <span data-i18n="ticker_tag">হালাল বিনিয়োগ</span>
+        </span>
+        <span class="truncate" data-i18n="ticker_text">সুদমুক্ত ও শরিয়াহ-সম্মত বিজনেস ইকোসিস্টেম | লাইভ প্রজেক্ট: <strong>Mariners Group Expansion</strong> (৭০% ফান্ডেড)</span>
+      </div>
+      <div class="hidden sm:flex items-center gap-4 text-emerald-300 shrink-0">
+        <a href="tel:+8801335149030" class="hover:text-white transition flex items-center gap-1.5">
+          <i class="fa-solid fa-phone-volume text-sm"></i> <span data-i18n="hotline_number">+৮৮০ ১৩৩৫-১৪৯০৩০</span>
+        </a>
+        <span class="text-emerald-800">|</span>
+        <a href="mailto:info@biniyogclub.com" class="hover:text-white transition flex items-center gap-1.5">
+          <i class="fa-regular fa-envelope text-sm"></i> info@biniyogclub.com
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="sticky top-0 z-50 bg-white/92 backdrop-blur-md border-b border-emerald-900/10 shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+      
+      <a href="/index.html" class="flex items-center gap-3 group focus:outline-none shrink-0">
+        <div class="h-10 sm:h-12 flex items-center py-1">
+          <img src="/assets/images/logo.png" alt="Biniyog Club Logo" class="h-8 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <div class="hidden lg:flex items-center space-x-5 xl:space-x-7 text-sm font-semibold text-slate-700 font-bangla lg:ml-8 xl:ml-14 shrink-0">
+        <a href="/index.html" class="hover:text-emerald-800 transition" data-i18n="nav_home">হোম</a>
+        <a href="/projects.html" class="hover:text-emerald-800 transition" data-i18n="nav_projects">প্রজেক্টস</a>
+        <a href="/how-it-works.html" class="hover:text-emerald-800 transition" data-i18n="nav_how_it_works">কীভাবে কাজ করে</a>
+        <a href="/sectors.html" class="hover:text-emerald-800 transition" data-i18n="nav_sectors">সেক্টরস</a>
+        <a href="/about.html" class="text-emerald-800 font-bold border-b-2 border-emerald-700 pb-1" data-i18n="nav_about">আমাদের সম্পর্কে</a>
+        <a href="/blog.html" class="hover:text-emerald-800 transition" data-i18n="nav_blog">ব্লগ</a>
+        <a href="/contact.html" class="hover:text-emerald-800 transition" data-i18n="nav_contact">যোগাযোগ</a>
+      </div>
+
+      <!-- Right Side Actions & Hamburger Container (Unified & Shifted Right) -->
+      <div class="flex items-center gap-1.5 sm:gap-3 ml-auto lg:ml-0 shrink-0">
+        <!-- Language Switcher Pill -->
+        <div class="lang-switcher-pill" role="group" aria-label="Language Switcher">
+          <button class="lang-btn lang-btn-bn" data-lang="bn" title="বাংলা">বাং</button>
+          <button class="lang-btn lang-btn-en active" data-lang="en" title="English">ENG</button>
+        </div>
+
+        <button class="open-login-btn px-2.5 sm:px-4 py-1.5 sm:py-2 text-base sm:text-lg font-bold text-emerald-800 hover:text-emerald-900 transition flex items-center gap-1 sm:gap-1.5 rounded-full hover:bg-emerald-50">
+          <i class="fa-regular fa-user text-base sm:text-lg"></i> <span data-i18n="nav_login">লগইন</span>
+        </button>
+        
+
+        <!-- Mobile Hamburger Button -->
+        <button id="mobileMenuBtn" class="hidden" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobileMenuDrawer" class="hidden fixed inset-y-0 right-0 z-50 w-72 sm:w-80 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out p-6 flex flex-col justify-between">
+    <div>
+      <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+        <img src="/assets/images/logo.png" alt="Biniyog Club" class="h-9 w-auto">
+        <button id="mobileMenuCloseBtn" class="p-2 text-slate-700 hover:text-red-500 text-xl focus:outline-none"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <!-- Mobile Language Switcher -->
+      <div class="mt-4 mb-2 flex items-center justify-between pb-3 border-b border-slate-100">
+        <span class="text-sm font-bold text-slate-700" data-i18n="drawer_lang_label">Language / ভাষা</span>
+        <div class="lang-switcher-pill" role="group" aria-label="Language Switcher">
+          <button class="lang-btn lang-btn-bn" data-lang="bn" title="বাংলা">বাং</button>
+          <button class="lang-btn lang-btn-en active" data-lang="en" title="English">EN</button>
+        </div>
+      </div>
+
+      <div class="flex flex-col space-y-3.5 mt-4 text-base font-semibold text-slate-700 font-bangla">
+        <a href="/index.html" class="mobile-nav-link hover:text-emerald-800 py-1 flex items-center justify-between"><span data-i18n="nav_home">হোম</span> <i class="fa-solid fa-chevron-right text-sm text-slate-300"></i></a>
+        <a href="/projects.html" class="mobile-nav-link hover:text-emerald-800 py-1 flex items-center justify-between"><span data-i18n="nav_projects">প্রজেক্টস</span> <i class="fa-solid fa-chevron-right text-sm text-slate-300"></i></a>
+        <a href="/how-it-works.html" class="mobile-nav-link hover:text-emerald-800 py-1 flex items-center justify-between"><span data-i18n="nav_how_it_works">কীভাবে কাজ করে</span> <i class="fa-solid fa-chevron-right text-sm text-slate-300"></i></a>
+        <a href="/sectors.html" class="mobile-nav-link hover:text-emerald-800 py-1 flex items-center justify-between"><span data-i18n="nav_sectors">সেক্টরস</span> <i class="fa-solid fa-chevron-right text-sm text-slate-300"></i></a>
+        <a href="/about.html" class="mobile-nav-link text-emerald-800 font-bold py-1 flex items-center justify-between"><span data-i18n="nav_about">আমাদের সম্পর্কে</span> <i class="fa-solid fa-chevron-right text-sm text-emerald-700"></i></a>
+        <a href="/blog.html" class="mobile-nav-link hover:text-emerald-800 py-1 flex items-center justify-between"><span data-i18n="nav_blog">ব্লগ</span> <i class="fa-solid fa-chevron-right text-sm text-slate-300"></i></a>
+        <a href="/contact.html" class="mobile-nav-link hover:text-emerald-800 py-1 flex items-center justify-between"><span data-i18n="nav_contact">যোগাযোগ</span> <i class="fa-solid fa-chevron-right text-sm text-slate-300"></i></a>
+      </div>
+    </div>
+    <div class="pt-6 border-t border-slate-100 space-y-3">
+      <button class="open-login-btn w-full py-2.5 rounded-full border border-emerald-700 text-emerald-800 font-bold text-sm" data-i18n="nav_login">লগইন</button>
+      
+      <div class="text-center pt-2 text-sm text-slate-400">
+        হটলাইন: <span data-i18n="hotline_number">+৮৮০ ১৩৩৫-১৪৯০৩০</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Header -->
+  <section class="pt-6 pb-2 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-100/90 border border-emerald-300 text-emerald-800 text-sm font-bold uppercase tracking-wider mb-3 shadow-sm">
+      <i class="fa-solid fa-users text-emerald-600"></i> <span data-i18n="about_page_badge">Empowered by the People</span>
+    </div>
+    <h1 class="text-3xl sm:text-5xl font-black text-[#063C2A] tracking-tight leading-tight font-bangla mb-3" data-i18n="about_page_title">
+      About Biniyog Club
+    </h1>
+  </section>
+
+  <!-- Story & Vision Showcase -->
+  <section class="pt-4 pb-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#063C2A] font-bangla mb-4" data-i18n="about_story_title">Our Story & Inspiration</h2>
+        <p class="text-slate-700 text-base leading-relaxed mb-4 font-bangla" data-i18n="about_story_p1">
+          We connect everyday people with productive commercial ventures. Our mission is to build an inclusive economic platform where individuals can become equity partners in profitable sectors without ever resorting to interest-bearing debt.
+        </p>
+        <p class="text-slate-700 text-base leading-relaxed mb-6 font-bangla" data-i18n="about_story_p2">
+          Across shipping, agro-tech, sustainable living, and community growth, we enforce transparent contracts and rigorous audits to ensure highest capital protection.
+        </p>
+
+        <!-- 3 Pillars -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="p-4 bg-white rounded-2xl border border-emerald-100 shadow-sm group transition-all duration-300 hover:-translate-y-1.5 hover:shadow-md hover:border-emerald-200 cursor-pointer">
+            <div class="text-emerald-700 text-xl mb-1.5 inline-block transition-transform duration-300 group-hover:scale-125 group-hover:text-emerald-500"><i class="fa-regular fa-eye"></i></div>
+            <h4 class="font-bold text-sm text-slate-900 mb-0.5" data-i18n="pillar_vision_title">Our Vision</h4>
+            <p class="text-base text-slate-700 leading-relaxed" data-i18n="pillar_vision_desc">A prosperous Bangladesh</p>
+          </div>
+          <div class="p-4 bg-white rounded-2xl border border-emerald-100 shadow-sm group transition-all duration-300 hover:-translate-y-1.5 hover:shadow-md hover:border-emerald-200 cursor-pointer">
+            <div class="text-emerald-700 text-xl mb-1.5 inline-block transition-transform duration-300 group-hover:scale-125 group-hover:text-emerald-500"><i class="fa-solid fa-bullseye"></i></div>
+            <h4 class="font-bold text-sm text-slate-900 mb-0.5" data-i18n="pillar_mission_title">Our Mission</h4>
+            <p class="text-base text-slate-700 leading-relaxed" data-i18n="pillar_mission_desc">Interest-free ecosystem</p>
+          </div>
+          <div class="p-4 bg-white rounded-2xl border border-emerald-100 shadow-sm group transition-all duration-300 hover:-translate-y-1.5 hover:shadow-md hover:border-emerald-200 cursor-pointer">
+            <div class="text-emerald-700 text-xl mb-1.5 inline-block transition-transform duration-300 group-hover:scale-125 group-hover:text-emerald-500"><i class="fa-regular fa-heart"></i></div>
+            <h4 class="font-bold text-sm text-slate-900 mb-0.5" data-i18n="pillar_values_title">Our Values</h4>
+            <p class="text-base text-slate-700 leading-relaxed" data-i18n="pillar_values_desc">Trust & Transparency</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+          <img src="/assets/images/1..png" alt="Biniyog Club Campus" class="w-full h-80 object-cover">
+        </div>
+        <div class="absolute -bottom-4 -left-4 bg-white/95 backdrop-blur-sm p-3.5 pr-5 rounded-2xl shadow-xl border border-emerald-100 flex items-center gap-3 z-10">
+          <div class="px-2.5 sm:px-3 py-1.5 min-w-[56px] sm:min-w-[64px] h-11 sm:h-12 rounded-xl bg-gradient-to-br from-emerald-600 to-emerald-800 text-white flex items-center justify-center text-base sm:text-lg font-extrabold shadow-sm shrink-0 tracking-tight" data-i18n="stat_members_num">
+            5,200+
+          </div>
+          <div>
+            <div class="font-bold text-sm text-slate-900 leading-relaxed" data-i18n="about_stat_investors">Satisfied Investors</div>
+            <div class="text-sm text-slate-700 mt-0.5 leading-relaxed" data-i18n="about_stat_investors_sub">Trusted Partnership</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership / Board of Directors -->
+  <section class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="text-center mb-10">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-[#063C2A] font-bangla" data-i18n="leadership_title">Our Leadership</h2>
+      <p class="text-slate-700 text-base sm:text-lg mt-1 font-bangla leading-relaxed" data-i18n="leadership_sub">Guided by visionary founders and backed by <span class="font-bold text-emerald-700">200+ Directors</span></p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <!-- Shamim Ahmed -->
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 text-center shadow-sm">
+        <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center mx-auto mb-4 overflow-hidden border-2 border-emerald-200">
+          <img src="assets/images/person/MDsir-png.webp" alt="Shamim Ahmed" class="w-full h-full object-cover">
+        </div>
+        <h4 class="font-bold text-lg text-slate-900 uppercase">Shamim Ahmed</h4>
+        <span class="text-sm text-emerald-700 font-semibold block mb-2">Managing Director & Founder</span>
+        <p class="text-sm text-slate-700 font-bold bg-slate-50 py-1.5 rounded-lg border border-slate-100">Mariners Group | MOHS Group</p>
+      </div>
+
+      <!-- Golam Sarwar -->
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 text-center shadow-sm">
+        <div class="w-20 h-20 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center text-3xl mx-auto mb-4 font-bold border-2 border-emerald-200">
+          <i class="fa-solid fa-user-tie"></i>
+        </div>
+        <h4 class="font-bold text-lg text-slate-900 uppercase">Golam Sarwar</h4>
+        <span class="text-sm text-emerald-700 font-semibold block mb-2">Chairman, MOHS Group</span>
+        <p class="text-xs text-slate-600 leading-relaxed bg-slate-50 p-2 rounded-lg border border-slate-100">
+          <strong>Advocate, Supreme Court of Bangladesh</strong><br>
+          LLB, LLM, Dhaka University<br>
+          LLB, London
+        </p>
+      </div>
+
+      <!-- S.M. Subberul Haque -->
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 text-center shadow-sm">
+        <div class="w-20 h-20 rounded-full bg-white flex items-center justify-center mx-auto mb-4 overflow-hidden border-2 border-emerald-200">
+          <img src="assets/images/person/subbderul.png" alt="S.M. Subberul Haque" class="w-full h-full object-cover object-top scale-[1.15] translate-y-1">
+        </div>
+        <h4 class="font-bold text-lg text-slate-900 uppercase">S.M. Subberul Haque</h4>
+        <div class="flex flex-col gap-1 mb-2">
+          <span class="text-sm text-emerald-700 font-semibold">Chairman, Mariners Group</span>
+          <span class="text-xs text-slate-600 font-bold">Executive Director (ED), MOHS Group</span>
+        </div>
+        <p class="text-xs text-slate-600 leading-relaxed bg-slate-50 p-2 rounded-lg border border-slate-100">
+          Ch. Engineer, MEO-1<br>
+          Ex-CEI- BMAS & NMI
+        </p>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#03251A] text-slate-300 pt-12 sm:pt-16 pb-8 border-t border-emerald-900/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 pb-10 sm:pb-12 border-b border-emerald-900/60">
+        <div class="sm:col-span-2">
+          <img src="/assets/images/logo.png" alt="Biniyog Club" class="h-9 mb-4 brightness-0 invert">
+          <p class="text-base text-slate-400 leading-relaxed max-w-sm font-bangla mb-6" data-i18n="footer_desc">
+            An interest-free business ecosystem connecting people, businesses & opportunities for a brighter Bangladesh.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-white font-bold text-sm mb-3 sm:mb-4" data-i18n="footer_quick_links">Quick Links</h4>
+          <ul class="space-y-2 text-sm text-slate-400 font-medium">
+            <li><a href="/index.html" class="hover:text-emerald-400 transition" data-i18n="nav_home">Home</a></li>
+            <li><a href="/projects.html" class="hover:text-emerald-400 transition" data-i18n="nav_projects">Projects</a></li>
+            <li><a href="/how-it-works.html" class="hover:text-emerald-400 transition" data-i18n="nav_how_it_works">How It Works</a></li>
+            <li><a href="/sectors.html" class="hover:text-emerald-400 transition" data-i18n="nav_sectors">Sectors</a></li>
+            <li><a href="/about.html" class="text-emerald-400 font-bold" data-i18n="nav_about">About</a></li>
+            <li><a href="/blog.html" class="hover:text-emerald-400 transition" data-i18n="nav_blog">Blog</a></li>
+            <li><a href="/contact.html" class="hover:text-emerald-400 transition" data-i18n="nav_contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold text-sm mb-3 sm:mb-4" data-i18n="footer_sectors">Sectors</h4>
+          <ul class="space-y-2 text-sm text-slate-400 font-medium">
+            <li><a href="/sectors.html" class="hover:text-emerald-400 transition" data-i18n="sector_2_title">Industry</a></li>
+            <li><a href="/sectors.html" class="hover:text-emerald-400 transition" data-i18n="sector_3_title">Real Estate</a></li>
+            <li><a href="/sectors.html" class="hover:text-emerald-400 transition" data-i18n="sector_4_title">Hospitality</a></li>
+            <li><a href="/sectors.html" class="hover:text-emerald-400 transition" data-i18n="sector_5_title">Agro</a></li>
+            <li><a href="/sectors.html" class="hover:text-emerald-400 transition" data-i18n="sector_1_title">Safe Investment</a></li>
+            <li><a href="/sectors.html" class="hover:text-emerald-400 transition" data-i18n="sector_6_title">Community</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold text-sm mb-3 sm:mb-4" data-i18n="footer_support">Support & Contact</h4>
+          <ul class="space-y-2 text-sm text-slate-400 font-medium">
+            <li><a href="#" class="hover:text-emerald-400 transition">Help Center</a></li>
+            <li><a href="#" class="hover:text-emerald-400 transition">Terms & Conditions</a></li>
+            <li><a href="#" class="hover:text-emerald-400 transition">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-emerald-400 transition">FAQs</a></li>
+            <li class="pt-2 text-emerald-400"><i class="fa-solid fa-phone text-xs"></i> <span data-i18n="hotline_number">+880 1335-149030</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between text-sm text-slate-700 gap-3 text-center sm:text-left">
+        <div data-i18n="footer_rights">© 2024 Biniyog Club. All rights reserved.</div>
+        <div class="text-emerald-400 font-semibold flex items-center gap-1.5">
+          <i class="fa-solid fa-leaf"></i> <span data-i18n="footer_motto">A Brighter Tomorrow Together</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal-overlay">
+    <div class="modal-window">
+      <button class="modal-close-btn"><i class="fa-solid fa-xmark"></i></button>
+      <div class="p-6 sm:p-8">
+        <img src="/assets/images/logo.png" alt="Biniyog Club" class="h-8 mb-3">
+        <h3 class="text-xl font-bold text-[#063C2A] mb-1" data-i18n="modal_login_title">Welcome Back</h3>
+        <p class="text-base text-slate-700 mb-5 leading-relaxed" data-i18n="modal_login_sub">Login to your account.</p>
+        <form class="space-y-3" onsubmit="handleSignup(event, this)">
+          <input type="email" placeholder="your.name@mail.com" class="w-full px-4 py-2 rounded-xl border text-sm">
+          <input type="password" placeholder="••••••••" class="w-full px-4 py-2 rounded-xl border text-sm">
+          <button type="submit" class="w-full btn-3d-ocean py-2 text-sm font-bold"><span data-i18n="nav_login">Login</span></button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Signup Modal -->
+  <div id="signupModal" class="modal-overlay">
+    <div class="modal-window">
+      <button class="modal-close-btn"><i class="fa-solid fa-xmark"></i></button>
+      <div class="p-6 sm:p-8">
+        <img src="/assets/images/logo.png" alt="Biniyog Club" class="h-8 mb-3">
+        <h3 class="text-xl font-bold text-[#063C2A] mb-1" data-i18n="modal_signup_title">Create Account</h3>
+        <p class="text-base text-slate-700 mb-5 leading-relaxed" data-i18n="modal_signup_sub">Join our interest-free ecosystem.</p>
+        <form class="space-y-3" onsubmit="handleSignup(event, this)">
+          <input type="text" placeholder="Full Name" data-i18n-placeholder="placeholder_full_name" class="w-full px-4 py-2 rounded-xl border text-sm">
+          <input type="email" placeholder="Email Address" data-i18n-placeholder="placeholder_email" class="w-full px-4 py-2 rounded-xl border text-sm">
+          <input type="tel" placeholder="Phone Number" data-i18n-placeholder="placeholder_phone" class="w-full px-4 py-2 rounded-xl border text-sm">
+          <input type="password" placeholder="Password" data-i18n-placeholder="placeholder_password" class="w-full px-4 py-2 rounded-xl border text-sm">
+          <button type="submit" class="w-full btn-3d-ocean py-2 text-sm font-bold"><span data-i18n="nav_join">Create Account</span></button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Translation & Interactive JavaScript Engines -->
+  <script src="/assets/js/translations.js?v=1790669124100"></script>
+  <script src="/assets/js/script.js"></script>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/8801335149030" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 flex items-center justify-center hover:-translate-y-1 hover:scale-110 transition-all duration-300 group shadow-[0_0_20px_rgba(34,197,94,0.3)] hover:shadow-[0_0_25px_rgba(34,197,94,0.5)] rounded-full animate-float">
+    <div class="relative flex items-center justify-center w-14 h-14 bg-[#25D366] rounded-full">
+      <i class="fa-brands fa-whatsapp text-white text-3xl drop-shadow-sm"></i>
+      <!-- Notification Badge -->
+      <span class="absolute -top-1 -right-1 flex h-[22px] w-[22px] items-center justify-center rounded-full bg-[#FF0000] text-sm font-bold text-white border-[2.5px] border-white shadow-sm">
+        1
+      </span>
+    </div>
+  </a>
+
+
+  <!-- Mobile Bottom Navigation -->
+  <nav class="lg:hidden fixed bottom-0 left-0 w-full bg-white border-t border-slate-100 shadow-[0_-10px_20px_rgba(0,0,0,0.04)] z-[70] flex justify-between px-2 pt-1 pb-1" style="padding-bottom: env(safe-area-inset-bottom, 0.25rem);">
+    
+    <a href="/index.html" class="flex flex-col items-center justify-center w-full py-1.5 text-slate-400 hover:text-emerald-600 transition bottom-nav-link" data-path="index.html">
+      <i class="fa-solid fa-house text-lg mb-0.5"></i>
+      <span class="text-[10px] font-bold" data-i18n="nav_home">Home</span>
+    </a>
+
+    <a href="/projects.html" class="flex flex-col items-center justify-center w-full py-1.5 text-slate-400 hover:text-emerald-600 transition bottom-nav-link" data-path="projects.html">
+      <i class="fa-solid fa-file-invoice text-lg mb-0.5"></i>
+      <span class="text-[10px] font-bold" data-i18n="nav_projects">Projects</span>
+    </a>
+
+    <div class="relative flex flex-col items-center justify-center w-full py-1.5 text-slate-400 hover:text-emerald-600 transition cursor-pointer bottom-nav-dropdown-btn" data-target="sectorsPopup">
+      <i class="fa-solid fa-shapes text-lg mb-0.5"></i>
+      <span class="text-[10px] font-bold" data-i18n="nav_sectors">Sectors</span>
+      
+      <div id="sectorsPopup" class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-44 bg-white rounded-2xl shadow-[0_0_20px_rgba(0,0,0,0.1)] border border-slate-100 hidden flex-col overflow-hidden animate-fade-in-up origin-bottom">
+        <a href="/sectors.html" class="px-4 py-3.5 text-xs font-bold text-slate-700 hover:bg-emerald-50 border-b border-slate-50 flex items-center gap-2.5">
+          <div class="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center"><i class="fa-solid fa-chart-pie"></i></div> 
+          <span data-i18n="nav_sectors">Our Sectors</span>
+        </a>
+        <a href="/how-it-works.html" class="px-4 py-3.5 text-xs font-bold text-slate-700 hover:bg-emerald-50 flex items-center gap-2.5">
+          <div class="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center"><i class="fa-solid fa-gears"></i></div> 
+          <span data-i18n="nav_how_it_works">How It Works</span>
+        </a>
+      </div>
+    </div>
+
+    <a href="/blog.html" class="flex flex-col items-center justify-center w-full py-1.5 text-slate-400 hover:text-emerald-600 transition bottom-nav-link" data-path="blog.html">
+      <i class="fa-regular fa-newspaper text-lg mb-0.5"></i>
+      <span class="text-[10px] font-bold" data-i18n="nav_blog">Blog</span>
+    </a>
+
+    <div class="relative flex flex-col items-center justify-center w-full py-1.5 text-slate-400 hover:text-emerald-600 transition cursor-pointer bottom-nav-dropdown-btn" data-target="aboutPopup">
+      <i class="fa-solid fa-user-group text-lg mb-0.5"></i>
+      <span class="text-[10px] font-bold" data-i18n="nav_about">About</span>
+      
+      <div id="aboutPopup" class="absolute bottom-full right-0 mb-2 w-40 bg-white rounded-2xl shadow-[0_0_20px_rgba(0,0,0,0.1)] border border-slate-100 hidden flex-col overflow-hidden animate-fade-in-up origin-bottom-right">
+        <a href="/about.html" class="px-4 py-3.5 text-xs font-bold text-slate-700 hover:bg-emerald-50 border-b border-slate-50 flex items-center gap-2.5">
+          <div class="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center"><i class="fa-solid fa-circle-info"></i></div> 
+          <span data-i18n="nav_about">About Us</span>
+        </a>
+        <a href="/contact.html" class="px-4 py-3.5 text-xs font-bold text-slate-700 hover:bg-emerald-50 flex items-center gap-2.5">
+          <div class="w-7 h-7 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center"><i class="fa-solid fa-headset"></i></div> 
+          <span data-i18n="nav_contact">Contact</span>
+        </a>
+      </div>
+    </div>
+
+  </nav>
+
+</body>
+</html>

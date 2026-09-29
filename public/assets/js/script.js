@@ -38,17 +38,6 @@ function biniyogInit() {
 window.biniyogInit = biniyogInit;
 onReady(() => {
   biniyogInit();
-
-  initLanguageSwitcher();
-  initHeroSlider();
-  // initTilt3D(); // 3D Tilt disabled as requested
-  initProjectFilters();
-  initModals();
-  initMobileMenu();
-  initContactForm();
-  initBannerLightbox();
-  initStatsCounter();
-  initCardCounters();
 });
 
 /* ========================================================
@@ -61,16 +50,31 @@ function toggleLanguage() {
 }
 
 function initLanguageSwitcher() {
+  if (window.__langSwitcherInitialized) return;
+  window.__langSwitcherInitialized = true;
+
   const currentLang = getCurrentLanguage();
   setLanguage(currentLang, false);
 
-  // 1-Click Toggle: Clicking/tapping anywhere on the pill flips language
-  const switcherPills = document.querySelectorAll('.lang-switcher-pill');
-  switcherPills.forEach(pill => {
+  // Direct click on specific language buttons
+  document.querySelectorAll('.lang-btn, [data-lang]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const targetLang = btn.getAttribute('data-lang');
+      if (targetLang === 'bn' || targetLang === 'en') {
+        setLanguage(targetLang, true);
+      }
+    });
+  });
+
+  // 1-Click Toggle for the pill background itself
+  document.querySelectorAll('.lang-switcher-pill').forEach(pill => {
     pill.setAttribute('role', 'button');
     pill.setAttribute('tabindex', '0');
 
     pill.addEventListener('click', (e) => {
+      if (e.target.closest('.lang-btn')) return; // let button handler manage it
       e.preventDefault();
       toggleLanguage();
     });
@@ -80,16 +84,6 @@ function initLanguageSwitcher() {
         e.preventDefault();
         toggleLanguage();
       }
-    });
-  });
-
-  // Fallback for any standalone language buttons outside of pills
-  const standaloneButtons = document.querySelectorAll('[data-lang]:not(.lang-switcher-pill [data-lang])');
-  standaloneButtons.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const targetLang = btn.getAttribute('data-lang');
-      if (targetLang) setLanguage(targetLang, true);
     });
   });
 }

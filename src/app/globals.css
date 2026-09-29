@@ -149,3 +149,8 @@
 .text-transparent {
   -webkit-text-fill-color: transparent !important;
 }
+
+/* Impact Metrics Luxury Emerald Gradient Bar */
+.impact-metrics-bar {
+  background: linear-gradient(90deg, #03251A 0%, #063C2A 35%, #0A5C40 50%, #063C2A 65%, #03251A 100%) !important;
+}

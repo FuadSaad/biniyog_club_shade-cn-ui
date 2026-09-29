@@ -19,11 +19,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <script src="/assets/js/translations.js" async={false}></script>
         <script dangerouslySetInnerHTML={{ __html: `
           try {
             var lang = sessionStorage.getItem('biniyog_lang') || localStorage.getItem('biniyog_lang') || 'en';
             document.documentElement.lang = lang;
-            if (lang === 'en') {
+            if (lang === 'en' && typeof translations !== 'undefined' && translations.en) {
               var s = document.createElement('style');
               s.id = 'lang-flash-guard';
               s.textContent = 'body { visibility: hidden !important; opacity: 0 !important; }';
@@ -35,7 +36,7 @@ export default function RootLayout({
                   document.body.style.visibility = 'visible';
                   document.body.style.opacity = '1';
                 }
-              }, 180);
+              }, 250);
             }
           } catch(e) {}
         ` }} />

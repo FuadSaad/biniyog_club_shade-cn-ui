@@ -1,69 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Real-Time Zero-Flash Translation Engine in HEAD -->
+  <!-- Clean Synchronous Language Guard (Zero Main-Thread Locking) -->
   <script src="/assets/js/translations.js"></script>
-  <script>
-    (function() {
-      try {
-        var lang = sessionStorage.getItem('biniyog_lang') || localStorage.getItem('biniyog_lang') || 'en';
-        document.documentElement.lang = lang;
-        document.documentElement.setAttribute('data-lang', lang);
-
-        if (lang === 'en' && typeof translations !== 'undefined' && translations.en) {
-          var s = document.createElement('style');
-          s.id = 'lang-flash-guard';
-          s.textContent = 'body { visibility: hidden !important; opacity: 0 !important; }';
-          document.head.appendChild(s);
-
-          var observer = new MutationObserver(function(mutations) {
-            for (var m = 0; m < mutations.length; m++) {
-              var added = mutations[m].addedNodes;
-              for (var n = 0; n < added.length; n++) {
-                var node = added[n];
-                if (node.nodeType === 1) {
-                  if (node.hasAttribute('data-i18n')) {
-                    var k = node.getAttribute('data-i18n');
-                    if (translations.en[k] !== undefined) node.innerHTML = translations.en[k];
-                  }
-                  if (node.hasAttribute('data-i18n-placeholder')) {
-                    var pk = node.getAttribute('data-i18n-placeholder');
-                    if (translations.en[pk] !== undefined) node.setAttribute('placeholder', translations.en[pk]);
-                  }
-                  var els = node.querySelectorAll ? node.querySelectorAll('[data-i18n], [data-i18n-placeholder]') : [];
-                  for (var i = 0; i < els.length; i++) {
-                    var el = els[i];
-                    var key = el.getAttribute('data-i18n');
-                    if (key && translations.en[key] !== undefined) el.innerHTML = translations.en[key];
-                    var pkey = el.getAttribute('data-i18n-placeholder');
-                    if (pkey && translations.en[pkey] !== undefined) el.setAttribute('placeholder', translations.en[pkey]);
-                  }
-                }
-              }
-            }
-          });
-          observer.observe(document.documentElement, { childList: true, subtree: true });
-
-          function reveal() {
-            observer.disconnect();
-            var g = document.getElementById('lang-flash-guard');
-            if (g) g.remove();
-            if (document.body) {
-              document.body.style.visibility = 'visible';
-              document.body.style.opacity = '1';
-            }
-          }
-
-          if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', reveal);
-          } else {
-            reveal();
-          }
-          setTimeout(reveal, 250);
-        }
-      } catch(e) {}
-    })();
-  </script>
   <meta charset="UTF-8">
   <meta name="color-scheme" content="light">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">

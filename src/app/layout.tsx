@@ -24,19 +24,16 @@ export default function RootLayout({
           try {
             var lang = sessionStorage.getItem('biniyog_lang') || localStorage.getItem('biniyog_lang') || 'en';
             document.documentElement.lang = lang;
-            if (lang === 'en' && typeof translations !== 'undefined' && translations.en) {
+            if (lang === 'en') {
               var s = document.createElement('style');
               s.id = 'lang-flash-guard';
-              s.textContent = 'body { visibility: hidden !important; opacity: 0 !important; }';
+              s.textContent = 'body { opacity: 0 !important; }';
               document.head.appendChild(s);
               setTimeout(function() {
                 var g = document.getElementById('lang-flash-guard');
                 if (g) g.remove();
-                if (document.body) {
-                  document.body.style.visibility = 'visible';
-                  document.body.style.opacity = '1';
-                }
-              }, 250);
+                if (document.body) document.body.style.opacity = '1';
+              }, 120);
             }
           } catch(e) {}
         ` }} />

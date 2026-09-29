@@ -98,6 +98,11 @@ function setLanguage(lang, animate = true) {
   } catch (e) {}
 
   document.documentElement.lang = lang;
+    const g = document.getElementById('lang-flash-guard');
+    if (g) g.remove();
+    if (document.body) {
+      document.body.style.opacity = '1';
+    }
 
   // Toggle active class on all language buttons
   const bnButtons = document.querySelectorAll('.lang-btn-bn, [data-lang="bn"]');

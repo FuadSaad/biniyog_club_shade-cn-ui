@@ -1,6 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Zero-Flash Language Guard (Prevents FOUT when navigating in English) -->
+  <script>
+    (function() {
+      try {
+        var lang = sessionStorage.getItem('biniyog_lang') || localStorage.getItem('biniyog_lang') || 'en';
+        document.documentElement.lang = lang;
+        if (lang === 'en') {
+          var s = document.createElement('style');
+          s.id = 'lang-flash-guard';
+          s.textContent = 'body { visibility: hidden !important; opacity: 0 !important; }';
+          document.head.appendChild(s);
+          setTimeout(function() {
+            var g = document.getElementById('lang-flash-guard');
+            if (g) g.remove();
+            if (document.body) {
+              document.body.style.visibility = 'visible';
+              document.body.style.opacity = '1';
+            }
+          }, 180);
+        }
+      } catch(e) {}
+    })();
+  </script>
   <meta charset="UTF-8">
   <meta name="color-scheme" content="light">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">

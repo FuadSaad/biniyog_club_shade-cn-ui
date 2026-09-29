@@ -195,7 +195,15 @@ function setLanguage(lang, animate = true) {
     setLanguage(initialLang, false);
   }
   // Reveal body after translation is applied (prevents flash of wrong language)
-  document.body.style.opacity = '1';
+  
+  // Immediately reveal body and remove language flash guard
+  const langGuard = document.getElementById('lang-flash-guard');
+  if (langGuard) langGuard.remove();
+  if (document.body) {
+    document.body.style.visibility = 'visible';
+    document.body.style.opacity = '1';
+    document.body.style.transition = 'opacity 0.08s ease-in';
+  }
   document.body.style.transition = 'opacity 0.08s ease';
 })();
 

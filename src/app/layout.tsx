@@ -19,6 +19,26 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <script dangerouslySetInnerHTML={{ __html: `
+          try {
+            var lang = sessionStorage.getItem('biniyog_lang') || localStorage.getItem('biniyog_lang') || 'en';
+            document.documentElement.lang = lang;
+            if (lang === 'en') {
+              var s = document.createElement('style');
+              s.id = 'lang-flash-guard';
+              s.textContent = 'body { visibility: hidden !important; opacity: 0 !important; }';
+              document.head.appendChild(s);
+              setTimeout(function() {
+                var g = document.getElementById('lang-flash-guard');
+                if (g) g.remove();
+                if (document.body) {
+                  document.body.style.visibility = 'visible';
+                  document.body.style.opacity = '1';
+                }
+              }, 180);
+            }
+          } catch(e) {}
+        ` }} />
         {/* Preconnect to Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

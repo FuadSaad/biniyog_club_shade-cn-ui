@@ -2,12 +2,17 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
-import Image from "next/image"
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#F6FAF8] text-[#112820] font-sans pb-20">
+    <div className="min-h-screen bg-[#F6FAF8] text-[#112820] font-sans pb-0">
       
+      {/* Top Ticker */}
+      <div className="bg-[#03251A] text-emerald-200 text-sm py-2 px-4 flex justify-center items-center gap-2">
+        <Badge className="bg-emerald-700/60 text-[10px]"><i className="fa-solid fa-leaf mr-1"></i> হালাল</Badge>
+        <span className="font-bangla">সুদমুক্ত ও শরিয়াহ-সম্মত বিজনেস ইকোসিস্টেম</span>
+      </div>
+
       {/* Top Navbar */}
       <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-emerald-900/10 shadow-sm transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
@@ -65,7 +70,7 @@ export default function Home() {
           </a>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-16">
           
           {/* Project Card 1 */}
           <Card className="rounded-3xl overflow-hidden border-slate-100 shadow-sm hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col group">
@@ -78,13 +83,11 @@ export default function Home() {
                 <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_6px_rgba(52,211,153,0.8)] animate-pulse"></span> ACTIVE PROJECT
               </Badge>
             </div>
-            
             <CardContent className="p-6 flex-1 flex flex-col">
               <h3 className="text-[22px] sm:text-[24px] font-extrabold text-[#0A1930] font-bangla leading-tight mb-2">Mariners Group Expansion</h3>
               <p className="text-[14px] sm:text-[15px] text-slate-500 flex items-center gap-2 font-bangla mb-5">
                 <i className="fa-solid fa-location-dot text-[#0F9E6C]"></i> Chittagong, Bangladesh
               </p>
-              
               <div className="mb-6 p-4 rounded-2xl border border-slate-100 bg-slate-50/50">
                 <div className="flex justify-between items-end mb-2">
                   <span className="text-[14px] font-bold text-[#0A1930]">Funding Progress</span>
@@ -102,44 +105,23 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              
               <div className="space-y-3 text-[14px] sm:text-[15px] text-slate-600 mt-auto pt-2">
                 <div className="flex justify-between pb-2 border-b border-slate-50">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-7 h-7 rounded-full bg-[#EAF5F1] flex items-center justify-center text-[#0F9E6C]"><i className="fa-regular fa-clock text-xs"></i></div>
-                    <span>Duration</span>
-                  </div>
+                  <span>Duration</span>
                   <span className="font-bold text-[#0A1930]">Lifetime</span>
                 </div>
                 <div className="flex justify-between pb-2 border-b border-slate-50">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-7 h-7 rounded-full bg-[#EFF6FF] flex items-center justify-center text-[#2563EB]"><i className="fa-regular fa-calendar-check text-xs"></i></div>
-                    <span>Maturity Date</span>
-                  </div>
-                  <span className="font-bold text-[#0A1930]">01-04-2027</span>
-                </div>
-                <div className="flex justify-between pb-2 border-b border-slate-50">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-7 h-7 rounded-full bg-[#EAF5F1] flex items-center justify-center text-[#0F9E6C]"><i className="fa-solid fa-coins text-xs"></i></div>
-                    <span>Share Value</span>
-                  </div>
+                  <span>Share Value</span>
                   <span className="font-bold text-[#0A1930]">৳ 1,000,000</span>
                 </div>
                 <div className="flex justify-between pb-2">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-7 h-7 rounded-full bg-[#EAF5F1] flex items-center justify-center text-[#0F9E6C]"><i className="fa-solid fa-percent text-xs"></i></div>
-                    <span>Profit Share</span>
-                  </div>
+                  <span>Profit Share</span>
                   <span className="font-bold text-[#0A1930]">25%</span>
                 </div>
               </div>
             </CardContent>
-            
             <CardFooter className="p-6 pt-0 flex flex-col gap-3">
-              <a href="#" className="w-full text-center text-[15px] font-bold text-[#0F9E6C] hover:text-[#0A1930] transition flex items-center justify-center gap-1.5 group">
-                View Investment Details <i className="fa-solid fa-arrow-right-long group-hover:translate-x-1 transition-transform"></i>
-              </a>
-              <Button className="w-full h-14 bg-[#0F9E6C] hover:bg-[#0C855A] text-white font-bold text-[16px] rounded-xl flex items-center gap-2 shadow-sm hover:shadow-md transition-all">
+              <Button className="w-full h-14 bg-[#0F9E6C] hover:bg-[#0C855A] text-white font-bold text-[16px] rounded-xl flex items-center gap-2">
                 <i className="fa-solid fa-handshake text-lg"></i> Become a Partner
               </Button>
             </CardFooter>
@@ -156,13 +138,11 @@ export default function Home() {
                 <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_6px_rgba(52,211,153,0.8)] animate-pulse"></span> ACTIVE PROJECT
               </Badge>
             </div>
-            
             <CardContent className="p-6 flex-1 flex flex-col">
               <h3 className="text-[22px] sm:text-[24px] font-extrabold text-[#0A1930] font-bangla leading-tight mb-2">MarinoZZ Restaurant Chain</h3>
               <p className="text-[14px] sm:text-[15px] text-slate-500 flex items-center gap-2 font-bangla mb-5">
                 <i className="fa-solid fa-location-dot text-[#0F9E6C]"></i> Dhaka, Bangladesh
               </p>
-              
               <div className="mb-6 p-4 rounded-2xl border border-slate-100 bg-slate-50/50">
                 <div className="flex justify-between items-end mb-2">
                   <span className="text-[14px] font-bold text-[#0A1930]">Funding Progress</span>
@@ -180,44 +160,23 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              
               <div className="space-y-3 text-[14px] sm:text-[15px] text-slate-600 mt-auto pt-2">
                 <div className="flex justify-between pb-2 border-b border-slate-50">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-7 h-7 rounded-full bg-[#EAF5F1] flex items-center justify-center text-[#0F9E6C]"><i className="fa-regular fa-clock text-xs"></i></div>
-                    <span>Duration</span>
-                  </div>
+                  <span>Duration</span>
                   <span className="font-bold text-[#0A1930]">Lifetime</span>
                 </div>
                 <div className="flex justify-between pb-2 border-b border-slate-50">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-7 h-7 rounded-full bg-[#EFF6FF] flex items-center justify-center text-[#2563EB]"><i className="fa-regular fa-calendar-check text-xs"></i></div>
-                    <span>Maturity Date</span>
-                  </div>
-                  <span className="font-bold text-[#0A1930]">01-04-2027</span>
-                </div>
-                <div className="flex justify-between pb-2 border-b border-slate-50">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-7 h-7 rounded-full bg-[#EAF5F1] flex items-center justify-center text-[#0F9E6C]"><i className="fa-solid fa-coins text-xs"></i></div>
-                    <span>Share Value</span>
-                  </div>
+                  <span>Share Value</span>
                   <span className="font-bold text-[#0A1930]">৳ 500,000</span>
                 </div>
                 <div className="flex justify-between pb-2">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-7 h-7 rounded-full bg-[#EAF5F1] flex items-center justify-center text-[#0F9E6C]"><i className="fa-solid fa-percent text-xs"></i></div>
-                    <span>Profit Share</span>
-                  </div>
+                  <span>Profit Share</span>
                   <span className="font-bold text-[#0A1930]">20%</span>
                 </div>
               </div>
             </CardContent>
-            
             <CardFooter className="p-6 pt-0 flex flex-col gap-3">
-              <a href="#" className="w-full text-center text-[15px] font-bold text-[#0F9E6C] hover:text-[#0A1930] transition flex items-center justify-center gap-1.5 group">
-                View Investment Details <i className="fa-solid fa-arrow-right-long group-hover:translate-x-1 transition-transform"></i>
-              </a>
-              <Button className="w-full h-14 bg-[#0F9E6C] hover:bg-[#0C855A] text-white font-bold text-[16px] rounded-xl flex items-center gap-2 shadow-sm hover:shadow-md transition-all">
+              <Button className="w-full h-14 bg-[#0F9E6C] hover:bg-[#0C855A] text-white font-bold text-[16px] rounded-xl flex items-center gap-2">
                 <i className="fa-solid fa-handshake text-lg"></i> Become a Partner
               </Button>
             </CardFooter>
@@ -234,13 +193,11 @@ export default function Home() {
                 <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_6px_rgba(52,211,153,0.8)] animate-pulse"></span> ACTIVE PROJECT
               </Badge>
             </div>
-            
             <CardContent className="p-6 flex-1 flex flex-col">
               <h3 className="text-[22px] sm:text-[24px] font-extrabold text-[#0A1930] font-bangla leading-tight mb-2">GrowUp Agro Farm</h3>
               <p className="text-[14px] sm:text-[15px] text-slate-500 flex items-center gap-2 font-bangla mb-5">
                 <i className="fa-solid fa-location-dot text-[#0F9E6C]"></i> Purbachal, Dhaka
               </p>
-              
               <div className="mb-6 p-4 rounded-2xl border border-slate-100 bg-slate-50/50">
                 <div className="flex justify-between items-end mb-2">
                   <span className="text-[14px] font-bold text-[#0A1930]">Funding Progress</span>
@@ -258,44 +215,78 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              
               <div className="space-y-3 text-[14px] sm:text-[15px] text-slate-600 mt-auto pt-2">
                 <div className="flex justify-between pb-2 border-b border-slate-50">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-7 h-7 rounded-full bg-[#EAF5F1] flex items-center justify-center text-[#0F9E6C]"><i className="fa-regular fa-clock text-xs"></i></div>
-                    <span>Duration</span>
-                  </div>
+                  <span>Duration</span>
                   <span className="font-bold text-[#0A1930]">Lifetime</span>
                 </div>
                 <div className="flex justify-between pb-2 border-b border-slate-50">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-7 h-7 rounded-full bg-[#EFF6FF] flex items-center justify-center text-[#2563EB]"><i className="fa-regular fa-calendar-check text-xs"></i></div>
-                    <span>Maturity Date</span>
-                  </div>
-                  <span className="font-bold text-[#0A1930]">01-04-2027</span>
-                </div>
-                <div className="flex justify-between pb-2 border-b border-slate-50">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-7 h-7 rounded-full bg-[#EAF5F1] flex items-center justify-center text-[#0F9E6C]"><i className="fa-solid fa-coins text-xs"></i></div>
-                    <span>Share Value</span>
-                  </div>
+                  <span>Share Value</span>
                   <span className="font-bold text-[#0A1930]">৳ 200,000</span>
                 </div>
                 <div className="flex justify-between pb-2">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-7 h-7 rounded-full bg-[#EAF5F1] flex items-center justify-center text-[#0F9E6C]"><i className="fa-solid fa-percent text-xs"></i></div>
-                    <span>Profit Share</span>
-                  </div>
+                  <span>Profit Share</span>
                   <span className="font-bold text-[#0A1930]">20%</span>
                 </div>
               </div>
             </CardContent>
-            
             <CardFooter className="p-6 pt-0 flex flex-col gap-3">
-              <a href="#" className="w-full text-center text-[15px] font-bold text-[#0F9E6C] hover:text-[#0A1930] transition flex items-center justify-center gap-1.5 group">
-                View Investment Details <i className="fa-solid fa-arrow-right-long group-hover:translate-x-1 transition-transform"></i>
-              </a>
-              <Button className="w-full h-14 bg-[#0F9E6C] hover:bg-[#0C855A] text-white font-bold text-[16px] rounded-xl flex items-center gap-2 shadow-sm hover:shadow-md transition-all">
+              <Button className="w-full h-14 bg-[#0F9E6C] hover:bg-[#0C855A] text-white font-bold text-[16px] rounded-xl flex items-center gap-2">
+                <i className="fa-solid fa-handshake text-lg"></i> Become a Partner
+              </Button>
+            </CardFooter>
+          </Card>
+          
+          {/* Project Card 4 */}
+          <Card className="rounded-3xl overflow-hidden border-slate-100 shadow-sm hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col group">
+            <div className="h-56 relative overflow-hidden">
+              <img src="/assets/images/4.png" alt="MOHS Venice City" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div className="absolute top-4 left-4 bg-slate-900/80 backdrop-blur-md text-white text-xs font-semibold px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-sm">
+                <i className="fa-solid fa-city"></i> Real Estate
+              </div>
+              <Badge className="absolute top-4 right-4 bg-[#0A6C4D]/90 backdrop-blur-md text-white font-bold border-emerald-600/30 px-2.5 py-1.5 rounded-full flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 shadow-[0_0_6px_rgba(52,211,153,0.8)] animate-pulse"></span> ACTIVE PROJECT
+              </Badge>
+            </div>
+            <CardContent className="p-6 flex-1 flex flex-col">
+              <h3 className="text-[22px] sm:text-[24px] font-extrabold text-[#0A1930] font-bangla leading-tight mb-2">MOHS Venice City</h3>
+              <p className="text-[14px] sm:text-[15px] text-slate-500 flex items-center gap-2 font-bangla mb-5">
+                <i className="fa-solid fa-location-dot text-[#0F9E6C]"></i> Basila, Dhaka
+              </p>
+              <div className="mb-6 p-4 rounded-2xl border border-slate-100 bg-slate-50/50">
+                <div className="flex justify-between items-end mb-2">
+                  <span className="text-[14px] font-bold text-[#0A1930]">Funding Progress</span>
+                  <span className="text-[15px] font-bold text-[#0F9E6C]">15.5%</span>
+                </div>
+                <Progress value={15.5} className="h-2.5 bg-slate-200 [&>div]:bg-[#0F9E6C]" />
+                <div className="flex justify-between items-center mt-3 text-sm">
+                  <div>
+                    <span className="block text-slate-400 text-xs uppercase font-bold mb-0.5">Raised</span>
+                    <span className="font-extrabold text-[#0F9E6C] text-[15px]">৳ 15,500,000</span>
+                  </div>
+                  <div className="text-right">
+                    <span className="block text-slate-400 text-xs uppercase font-bold mb-0.5">Target</span>
+                    <span className="font-extrabold text-[#0A1930] text-[15px]">৳ 100,000,000</span>
+                  </div>
+                </div>
+              </div>
+              <div className="space-y-3 text-[14px] sm:text-[15px] text-slate-600 mt-auto pt-2">
+                <div className="flex justify-between pb-2 border-b border-slate-50">
+                  <span>Duration</span>
+                  <span className="font-bold text-[#0A1930]">Lifetime</span>
+                </div>
+                <div className="flex justify-between pb-2 border-b border-slate-50">
+                  <span>Share Value</span>
+                  <span className="font-bold text-[#0A1930]">৳ 2,000,000</span>
+                </div>
+                <div className="flex justify-between pb-2">
+                  <span>Profit Share</span>
+                  <span className="font-bold text-[#0A1930]">25%</span>
+                </div>
+              </div>
+            </CardContent>
+            <CardFooter className="p-6 pt-0 flex flex-col gap-3">
+              <Button className="w-full h-14 bg-[#0F9E6C] hover:bg-[#0C855A] text-white font-bold text-[16px] rounded-xl flex items-center gap-2">
                 <i className="fa-solid fa-handshake text-lg"></i> Become a Partner
               </Button>
             </CardFooter>
@@ -303,6 +294,56 @@ export default function Home() {
 
         </div>
       </section>
+
+      {/* Impact Metrics Section */}
+      <section className="bg-gradient-to-r from-[#03251A] via-[#0A5C40] to-[#03251A] text-white py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-10">Our Growing Impact</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div>
+              <div className="text-4xl font-black text-emerald-300 mb-2">5+</div>
+              <div className="text-emerald-100/80 text-sm">Active Projects</div>
+            </div>
+            <div>
+              <div className="text-4xl font-black text-emerald-300 mb-2">৳ 10Cr+</div>
+              <div className="text-emerald-100/80 text-sm">Total Funded</div>
+            </div>
+            <div>
+              <div className="text-4xl font-black text-emerald-300 mb-2">100%</div>
+              <div className="text-emerald-100/80 text-sm">Shariah Compliant</div>
+            </div>
+            <div>
+              <div className="text-4xl font-black text-emerald-300 mb-2">500+</div>
+              <div className="text-emerald-100/80 text-sm">Happy Investors</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-[#112820] text-slate-300 py-12 px-4 sm:px-6 lg:px-8 text-center sm:text-left">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 className="text-xl font-bold text-white mb-4">Biniyog Club</h3>
+            <p className="text-slate-400 text-sm">An interest-free business ecosystem connecting people, businesses & opportunities for a brighter Bangladesh.</p>
+          </div>
+          <div>
+            <h4 className="text-white font-bold mb-4">Quick Links</h4>
+            <ul className="space-y-2 text-sm text-slate-400">
+              <li><a href="#" className="hover:text-emerald-400 transition">Projects</a></li>
+              <li><a href="#" className="hover:text-emerald-400 transition">About Us</a></li>
+              <li><a href="#" className="hover:text-emerald-400 transition">How it Works</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="text-white font-bold mb-4">Contact</h4>
+            <ul className="space-y-2 text-sm text-slate-400">
+              <li><i className="fa-solid fa-phone mr-2"></i> +880 1335 149030</li>
+              <li><i className="fa-solid fa-envelope mr-2"></i> info@biniyogclub.com</li>
+            </ul>
+          </div>
+        </div>
+      </footer>
 
     </div>
   );

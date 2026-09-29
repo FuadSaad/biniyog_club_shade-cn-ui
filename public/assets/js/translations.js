@@ -443,7 +443,7 @@ const translations = {
 
     // Hero Section
     hero_badge: "Interest-Free Business Ecosystem",
-    hero_title: 'An <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-[#0A5C40]">Interest-Free</span> Business Ecosystem',
+    hero_title: 'An <span class="hero-gradient-text">Interest-Free</span> Business Ecosystem',
     hero_desc: "Connecting individuals, ventures, and enterprises on a unified platform to foster ethical, interest-free investments in shipping, real estate, hospitality, agro, and community impact.",
     btn_start_investing: "Start Investing",
     btn_how_it_works: "How It Works?",

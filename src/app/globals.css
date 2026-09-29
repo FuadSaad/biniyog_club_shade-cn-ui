@@ -159,3 +159,88 @@
 body, html {
   background-color: #F9FBFA !important;
 }
+
+
+/* ========================================================
+   SENIOR DEMOGRAPHIC (30-60 YRS) ACCESSIBILITY & MINIMALISM
+   ======================================================== */
+body, html {
+  font-family: "Hind Siliguri", "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #0F172A;
+  background-color: #F9FBFA !important;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Tabular lining figures for clear financial amounts */
+.stat-counter-val, .card-stat-val, [data-amount], .financial-figure {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+/* Minimalist Natural Elevation (No harsh AI drop-shadows) */
+.human-card {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04), 0 1px 2px rgba(15, 23, 42, 0.02) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.human-card:hover {
+  border-color: #CBD5E1 !important;
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Senior-friendly primary button (Stripe/Vanguard style) */
+.btn-primary-senior {
+  background-color: #0A6C4D !important;
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  padding: 0.875rem 2rem !important;
+  border-radius: 12px !important;
+  min-height: 50px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.625rem !important;
+  border: 1px solid #08543C !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) !important;
+  transition: all 0.15s ease !important;
+  text-decoration: none !important;
+}
+
+.btn-primary-senior:hover {
+  background-color: #08543C !important;
+  box-shadow: 0 4px 14px rgba(10, 108, 77, 0.25) !important;
+  transform: translateY(-1px) !important;
+}
+
+.btn-secondary-senior {
+  background-color: #FFFFFF !important;
+  color: #0F172A !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  padding: 0.875rem 2rem !important;
+  border-radius: 12px !important;
+  min-height: 50px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.625rem !important;
+  border: 1.5px solid #CBD5E1 !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04) !important;
+  transition: all 0.15s ease !important;
+  text-decoration: none !important;
+}
+
+.btn-secondary-senior:hover {
+  background-color: #F8FAFC !important;
+  border-color: #94A3B8 !important;
+  color: #0A6C4D !important;
+  transform: translateY(-1px) !important;
+}
